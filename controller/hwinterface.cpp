@@ -124,7 +124,7 @@ HwInterface::SensorData HwInterface::readData()
 		double targetTemp;
 		std::ifstream tttemp("targetTemp"); // TODO: filename
 		tttemp >> targetTemp;
-		if (targetTemp < 15) targetTemp = 15;
+		if (targetTemp < 5) targetTemp = 5;
 		if (targetTemp > 24) targetTemp = 24;
 		sensdata.Tmal = targetTemp;
 	}
