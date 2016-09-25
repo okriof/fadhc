@@ -1,0 +1,10 @@
+Standard startup: bbcontroller, logTransmitter, tempReceiver
+
+controller: PID-based temperature controller (requires shunt valve control).
+bbcontroller: Simpler On-Off controller.
+
+logTransmitter: Broadcasting log data via UDP.
+
+tempReceiver: Listening for new temperature settings.
+
+weeksetting: Week-based temperature control (nights and weekdays: lower temperatures), warmer in the morning.

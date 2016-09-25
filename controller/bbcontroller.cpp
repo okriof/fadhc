@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include "params.h"
 
+// Simpler On-Off controller
 int main()
 {
 	HwInterface hw;
