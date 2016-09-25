@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkWindow" id="wndMain">
+    <property name="can_focus">False</property>
+    <property name="resizable">False</property>
+    <property name="default_width">1024</property>
+    <property name="default_height">596</property>
+    <property name="hide_titlebar_when_maximized">True</property>
+    <property name="has_resize_grip">False</property>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="width_request">1024</property>
+        <property name="height_request">550</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage" id="imgBackground">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">guibg.png</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblCounter">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">label</property>
+          </object>
+          <packing>
+            <property name="x">413</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnEnd">
+            <property name="label">gtk-quit</property>
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="can_focus">False</property>
+            <property name="receives_default">False</property>
+            <property name="relief">half</property>
+            <property name="use_stock">True</property>
+            <property name="image_position">right</property>
+          </object>
+          <packing>
+            <property name="x">78</property>
+            <property name="y">288</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblTime">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.46000000834465027</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="82400"&gt;&lt;b&gt;00:00&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="single_line_mode">True</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblInT">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="41200"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="single_line_mode">True</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">564</property>
+            <property name="y">233</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblInTset">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.34000000357627869</property>
+            <property name="label" translatable="yes">&lt;span foreground="#a0a000" size="41200"&gt;&lt;b&gt;80.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="single_line_mode">True</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">615</property>
+            <property name="y">154</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblOutTS">
+            <property name="width_request">160</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">1</property>
+            <property name="label" translatable="yes">&lt;span foreground="#a0a000" size="41200"&gt;&lt;b&gt;-80.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="single_line_mode">True</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">381</property>
+            <property name="y">240</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblOutTN">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.34000000357627869</property>
+            <property name="label" translatable="yes">&lt;span foreground="#a0a000" size="41200"&gt;&lt;b&gt;-80.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="single_line_mode">True</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">789</property>
+            <property name="y">240</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblPelletsAcc1">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="30000"&gt;&lt;b&gt;20.0
+-3.5&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">right</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">80</property>
+            <property name="y">396</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblPelletsAcc2">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="30000"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">right</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">205</property>
+            <property name="y">396</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblPelletsAcc3">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="30000"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">right</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">341</property>
+            <property name="y">396</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblPelletsAcc4">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="30000"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">right</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">474</property>
+            <property name="y">396</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblPelletsAcc5">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="30000"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">right</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">604</property>
+            <property name="y">396</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblPelletsAcc6">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="30000"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">right</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">732</property>
+            <property name="y">396</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblPelletsAcc7">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="30000"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="justify">right</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">853</property>
+            <property name="y">396</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTempTime">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="relief">none</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTempTime">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00a000" size="41200"&gt;&lt;b&gt;Sänkn. 00:00&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">140</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTempConst">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="relief">none</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTempConst">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00a000" size="41200"&gt;&lt;b&gt;Konst. 20.0&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">210</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage" id="imgPelletOn">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">pelletOn.png</property>
+          </object>
+          <packing>
+            <property name="x">609</property>
+            <property name="y">273</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblElPwr">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0.41999998688697815</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="41200"&gt;&lt;b&gt;20.0&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="single_line_mode">True</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">885</property>
+            <property name="y">56</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="wndTimeSel">
+    <property name="can_focus">False</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="default_width">440</property>
+    <property name="default_height">250</property>
+    <child>
+      <object class="GtkFixed" id="fixed2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="btnTimeSelOK">
+            <property name="label">gtk-ok</property>
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_stock">True</property>
+            <property name="focus_on_click">False</property>
+          </object>
+          <packing>
+            <property name="x">215</property>
+            <property name="y">350</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblTimeSelTime">
+            <property name="width_request">320</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">&lt;span foreground="#00a000" size="52400"&gt;&lt;b&gt;00:00&lt;/b&gt;&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+            <property name="track_visited_links">False</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel1">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;1&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">95</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel2">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;2&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">95</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel3">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;3&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">215</property>
+            <property name="y">95</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel4">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;4&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">180</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel5">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel5">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;5&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">180</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel6">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel6">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;6&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">215</property>
+            <property name="y">180</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel7">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel7">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;7&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">265</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel8">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel8">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;8&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">265</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel9">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel9">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">8</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;9&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">215</property>
+            <property name="y">265</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSel0">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="focus_on_click">False</property>
+            <child>
+              <object class="GtkLabel" id="lblTimeSel0">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="yalign">0.5899999737739563</property>
+                <property name="ypad">13</property>
+                <property name="label" translatable="yes">&lt;span foreground="#00FF00" size="xx-large"&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">350</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnTimeSelCancel">
+            <property name="label">gtk-cancel</property>
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_stock">True</property>
+            <property name="focus_on_click">False</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">350</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
