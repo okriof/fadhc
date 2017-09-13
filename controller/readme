@@ -8,3 +8,5 @@ logTransmitter: Broadcasting log data via UDP.
 tempReceiver: Listening for new temperature settings.
 
 weeksetting: Week-based temperature control (nights and weekdays: lower temperatures), warmer in the morning.
+
+remoteTempSetting: Listening on PIO for external temperature control. Switches between two pre-set temperatures. Used instead of tempReceiver.

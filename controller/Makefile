@@ -1,4 +1,4 @@
-all: bbcontroller controller weeksetting logTransmitter tempReceiver
+all: bbcontroller controller weeksetting logTransmitter tempReceiver remoteTempSetting
 
 
 controller : controller.cpp hwinterface.cpp hwinterface.h params.cpp params.h ../sensorfiles.h Makefile
@@ -20,8 +20,10 @@ logTransmitter: logTransmitter.cpp Makefile
 tempReceiver: tempReceiver.cpp Makefile
 	g++ -Wall -o tempReceiver tempReceiver.cpp
 
+remoteTempSetting: remoteTempSetting.cpp ../sensorfiles.h Makefile
+	g++ -Wall -o remoteTempSetting remoteTempSetting.cpp
 
 clean : 
-	rm bbcontroller controller weeksetting logTransmitter tempReceiver
+	rm bbcontroller controller weeksetting logTransmitter tempReceiver remoteTempSetting
 
 

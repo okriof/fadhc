@@ -9,10 +9,12 @@
 #define   SENS_T_UTE_S	       "/mnt/1wire/uncached/28.ECB095040000/temperature12"
 #define   SENS_PELLETS_CNT     "/mnt/1wire/FC.0000000000FB/910/count"
 #define   SENS_ELFORB_CNT      "/mnt/1wire/FC.000000000123/910/count"
+#define   SENS_REMOTE_TEMP     "/mnt/1wire/FC.000000000123/910/pio"
 
 #define   CTRL_SHUNT_TPM       "/mnt/1wire/FC.0000000000FB/910/tpm1c"
 #define   CTRL_SHUNT_PERIOD    "/mnt/1wire/FC.0000000000FB/910/period1"
 #define   CTRL_SHUNT_DUTY      "/mnt/1wire/FC.0000000000FB/910/duty1"
+#define   CTRL_REMOTE_SETUP    "/mnt/1wire/FC.000000000123/910/pioc" 
 
 #define   CTRL_BOILER_HOLD      "/mnt/1wire/FC.0000000000FB/910/out"
 
